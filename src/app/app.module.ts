@@ -14,6 +14,7 @@ import { AirlineDataComponent } from './component/layout for air line&comm/airli
 import { FooterComponent } from './sheard/footer/footer.component';
 import { LayoutComponent } from './component/layout/layout.component';
 import { ViewLayoutComponent } from './component/layout for air line&comm/view-layout/view-layout.component';
+import { ComDataEntryComponent } from './component/com-data-entry/com-data-entry.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ViewLayoutComponent } from './component/layout for air line&comm/view-l
     AirlineDataComponent,
     FooterComponent,
     LayoutComponent,
-    ViewLayoutComponent
+    ViewLayoutComponent,
+    ComDataEntryComponent
   ],
   imports: [
     BrowserModule,
