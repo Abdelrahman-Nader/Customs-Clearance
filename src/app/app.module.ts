@@ -4,15 +4,20 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module.routing';
 import { AppComponent } from './app.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { SheardModule } from './sheard/sheard.module';
 import { DataComponentModule } from './component/data-component.module';
+import { MainLayoutModule } from './main-layout/main-layout.module';
+import { LoginComponent } from './login/login/login.component';
+import { RegisterComponent } from './login/register/register.component';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -21,7 +26,9 @@ import { DataComponentModule } from './component/data-component.module';
     RouterOutlet,
     NgbModule,
     SheardModule,
-    DataComponentModule
+    DataComponentModule,
+    MainLayoutModule,
+
 
 
 

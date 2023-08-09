@@ -5,6 +5,8 @@ import { DataEntryComponent } from './data-entry/data-entry.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ViewLayoutModule } from './layout for air line&comm/view-layout.module';
 import { SheardModule } from '../sheard/sheard.module';
+import { RouterModule } from '@angular/router';
+import { ComponentRoutingModule } from './component.module.routing';
 
 
 
@@ -19,7 +21,9 @@ import { SheardModule } from '../sheard/sheard.module';
   imports: [
     CommonModule,
     ViewLayoutModule,
-    SheardModule
+    SheardModule,
+    RouterModule,
+    ComponentRoutingModule
   ],
   exports: [
     ComDataEntryComponent,
