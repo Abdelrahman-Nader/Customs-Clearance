@@ -6,7 +6,8 @@
   background-color: chocolate;
   background: url(../../../assets/port2.jpg) ;
   background-size: cover;
-
+  background-color: rgb(0 0 0 / 60%);
+    background-blend-mode: darken;
 
 }
 
@@ -15,9 +16,11 @@
   position: relative;
   width: 380px;
   height: 420px;
-  background-color: brown;
+  background-color: rgba(165, 42, 42, 0.699);
   border-radius: 8px;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.4);
+
 }
 .box::before{
   content: '';
@@ -90,8 +93,8 @@
   inset: 4px;
   padding: 50px 40px;
   border-radius: 8px;
-  background-color: #ff2a2a;
-  z-index: 2;
+  background-color: hwb(73 40% 85% / 43);
+    z-index: 2;
   display: flex;
   flex-direction: column;
 }
