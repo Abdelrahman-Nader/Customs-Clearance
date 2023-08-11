@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then(mod => mod.LoginModule),
   },
+  {
+    path: 'data',
+    loadChildren: () => import('./component/data-component.module').then(mod => mod.DataComponentModule),
+  },
 
   // { path: '**', component: Page404Component }
 ];

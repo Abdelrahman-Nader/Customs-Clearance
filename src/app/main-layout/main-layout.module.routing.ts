@@ -9,9 +9,19 @@ const routes: Routes = [
   { path: '', component: MainLayoutComponent,
   children: [
     {
-      path: 'login',
+      path: 'layout',
       loadChildren: () =>
-        import('../login/login.module').then((mod) => mod.LoginModule),
+        import('../main-layout/main-layout.module').then((mod) => mod.MainLayoutModule),
+    },
+    {
+      path: 'data',
+      loadChildren: () =>
+        import('../component/data-component.module').then((mod) => mod.DataComponentModule),
+    },
+    {
+      path: 'data port',
+      loadChildren: () =>
+        import('../component/data-component.module').then((mod) => mod.DataComponentModule),
     },
   ],
  },
