@@ -4,7 +4,7 @@ import { MainLayoutComponent } from './component layout/main-layout/main-layout.
 import { SheardModule } from '../sheard/sheard.module';
 import { DataComponentModule } from '../component/data-component.module';
 import { ViewLayoutModule } from '../component/layout for air line&comm/view-layout.module';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { MainLayoutRoutingModule } from './main-layout.module.routing';
 import { LoginRoutingModule } from '../login/login.module.routing';
 import { ComponentRoutingModule } from '../component/component.module.routing';
@@ -23,7 +23,8 @@ import { ComponentRoutingModule } from '../component/component.module.routing';
     RouterModule,
     MainLayoutRoutingModule,
     LoginRoutingModule,
-    ComponentRoutingModule
+    ComponentRoutingModule,
+    RouterOutlet
 
 
   ],
