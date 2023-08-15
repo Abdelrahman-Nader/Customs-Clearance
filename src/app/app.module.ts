@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module.routing';
 import { AppComponent } from './app.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { SheardModule } from './sheard/sheard.module';
-import { DataComponentModule } from './component/data-component.module';
+// import { DataComponentModule } from './component/data-component.module';
 import { MainLayoutModule } from './main-layout/main-layout.module';
 import { LoginComponent } from './login/login/login.component';
 import { RegisterComponent } from './login/register/register.component';
@@ -26,7 +26,6 @@ import { LoginModule } from './login/login.module';
     RouterOutlet,
     NgbModule,
     SheardModule,
-    DataComponentModule,
     MainLayoutModule,
 
 
