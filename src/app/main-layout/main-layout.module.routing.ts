@@ -9,15 +9,7 @@ import { ComDataEntryComponent } from './com-data-entry/com-data-entry.component
 
 const routes: Routes = [
 
-  { path: '', component: MainLayoutComponent },
   { path: 'layout', component: MainLayoutComponent },
-
-
-
-  { path: 'data', component: DataEntryComponent },
-
-
-  { path: 'data port', component: ComDataEntryComponent },
 
 
 ];

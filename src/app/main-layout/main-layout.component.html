@@ -1,12 +1,18 @@
 
-<div class="row bg bg-warning-subtle justify-content-center " dir="rtl">
-<div class="col-12 ">
-  <app-footer ></app-footer>
+<main-navbar class="fixed-top"></main-navbar>
+<div class="container-fluid ps-0 bg bg-info-subtle justify-content-center" dir="rtl">
+  <section class="row">
+
+    <side-nav class="col-3"></side-nav>
+  </section>
+
 
 </div>
+<div class="col-12">
+  <router-outlet></router-outlet>
 
 </div>
-
+<app-footer></app-footer>
 
 
 
