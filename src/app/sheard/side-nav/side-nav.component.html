@@ -1,8 +1,46 @@
-<div class="row ">
-
-  <nav class="nav flex-column pt-5 ps-5 nav-pills nav-fill w-25  mb-3 mt-4">
-    <a class="nav-link" aria-current="page" routerLink="/layout" routerLinkActive="active">Home</a>
-    <a class="nav-link" routerLink="/data" routerLinkActive="active" >Company Data</a>
-    <a class="nav-link" routerLink="/data port" routerLinkActive="active">Ports Data</a>
-  </nav>
+<div class="side-nav" dir="rtl">
+  <div class="row flex-nowrap">
+    <div class="logo">
+      <a
+        routerLink="/layout"
+        class="text-decoration-none d-flex align-items-center gap-2"
+      >
+        <img src="../../../assets/logo.png" alt="" />
+        <span> LOGO</span>
+      </a>
+    </div>
+    <div
+      class="col-auto col-md-2 min-vh-100 bg-body-tertiary p-4 pe-0"
+      style="border-left: 1px solid lightgrey"
+    >
+      <nav class="p-4 overflow-y-auto mt-3">
+        <a
+          class="nav-link d-flex text-decoration-none align-items-center mb-2"
+          aria-current="page"
+          routerLink="/layout"
+          routerLinkActive="active"
+        >
+          <i class="bi bi-house-door-fill ms-2"></i>
+          <span class="d-sm-none d-md-block"> الرئيسية </span></a
+        >
+        <a
+          class="nav-link d-flex text-decoration-none align-items-center mb-2"
+          routerLink="/data"
+          routerLinkActive="active"
+        >
+          <i class="bi bi-house-door-fill ms-2"></i>
+          <span class="d-sm-none d-md-block"> بيانات الشركات </span>
+          <i class="bi bi-caret-left-fill me-2"></i></a>
+        <a
+          class="nav-link d-flex text-decoration-none align-items-center mb-2"
+          routerLink="/data port"
+          routerLinkActive="active"
+        >
+          <i class="bi bi-house-door-fill ms-2"></i>
+          <span class="d-sm-none d-md-block"> بيانات الموانئ </span>
+          <i class="bi bi-caret-left-fill me-2"></i>
+        </a>
+      </nav>
+    </div>
+  </div>
 </div>
