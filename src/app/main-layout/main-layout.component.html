@@ -1,22 +1,21 @@
+<!-- <div class="container"> -->
+  <!-- <div
+  class="container ps-0 bg bg-info-subtle justify-content-center"
+  dir="rtl"
+  >
+  <main-navbar class="fixed-top"></main-navbar>
+    <section class="col-3 bg-dark">
+      <side-nav></side-nav>
+    </section>
 
-<main-navbar class="fixed-top"></main-navbar>
-<div class="container-fluid ps-0 bg bg-info-subtle justify-content-center" dir="rtl">
-  <section class="row">
+    <div class="col-8">
+      <router-outlet></router-outlet>
+      <view-layout></view-layout>
+    </div>
+    <app-footer></app-footer>
+  </div> -->
+<!-- </div> -->
+<side-nav></side-nav>
+<router-outlet></router-outlet>
 
-    <side-nav class="col-3"></side-nav>
-  </section>
-
-
-</div>
-<div class="col-12">
-  <router-outlet></router-outlet>
-
-</div>
-<app-footer></app-footer>
-
-
-
-
-
-
-
+<app-footer></app-footer>// cancel footer
