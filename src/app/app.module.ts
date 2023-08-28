@@ -10,9 +10,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { SheardModule } from './sheard/sheard.module';
 // import { DataComponentModule } from './component/data-component.module';
 import { MainLayoutModule } from './main-layout/main-layout.module';
-import { LoginComponent } from './login/login/login.component';
-import { RegisterComponent } from './login/register/register.component';
-import { LoginModule } from './login/login.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,6 +25,7 @@ import { LoginModule } from './login/login.module';
     NgbModule,
     SheardModule,
     MainLayoutModule,
+    BrowserAnimationsModule,
 
 
 

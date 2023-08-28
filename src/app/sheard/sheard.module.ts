@@ -5,10 +5,10 @@ import { MenutabComponent } from './menutab/menutab.component';
 import { MainNavbarComponent } from './main-navbar/main-navbar.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { RouterModule } from '@angular/router';
-import { LoginModule } from '../login/login.module';
-import { MainLayoutModule } from '../main-layout/main-layout.module';
 import { MainLayoutRoutingModule } from '../main-layout/main-layout.module.routing';
 import { LoginRoutingModule } from '../login/login.module.routing';
+import { MaterialModule } from './material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 // import { SheardComponent } from './sheard/sheard.component';
 
 
@@ -17,7 +17,9 @@ import { LoginRoutingModule } from '../login/login.module.routing';
     CommonModule,
     RouterModule,
     MainLayoutRoutingModule,
-    LoginRoutingModule
+    LoginRoutingModule,
+    MaterialModule,
+    FlexLayoutModule,
 
 
   ],
@@ -26,7 +28,9 @@ import { LoginRoutingModule } from '../login/login.module.routing';
     FooterComponent,
     MenutabComponent,
     MainNavbarComponent,
-    SideNavComponent
+    SideNavComponent,
+    MaterialModule,
+
   ],
 
   declarations: [
