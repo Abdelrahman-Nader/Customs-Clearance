@@ -17,6 +17,8 @@ const routes: Routes = [
       { path: 'data port', component: ComDataEntryComponent },
     ],
   },
+  { path: 'login',
+  loadChildren: () => import('../login/login.module').then(mod => mod.LoginModule), },
 ];
 
 @NgModule({
