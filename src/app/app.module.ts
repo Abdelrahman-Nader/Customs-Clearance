@@ -11,7 +11,8 @@ import { SheardModule } from './sheard/sheard.module';
 // import { DataComponentModule } from './component/data-component.module';
 import { MainLayoutModule } from './main-layout/main-layout.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NgChartsModule } from 'ng2-charts';
+import Chart from 'chart.js/auto';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SheardModule,
     MainLayoutModule,
     BrowserAnimationsModule,
+    NgChartsModule,
+
 
 
 

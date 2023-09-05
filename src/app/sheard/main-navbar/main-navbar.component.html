@@ -19,8 +19,8 @@
 
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <div fxFlex fxLayout="row" fxLayoutAlign="flex-start">
-      <ul fxLayout="row" fxLayoutGap="20px">
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-start center">
+      <ul fxFlex fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="flex-center center" class="m-0">
         <li>
           <button mat-icon-button>
             <mat-icon>settings</mat-icon>
@@ -32,7 +32,7 @@
           </button>
         </li>
         <li>
-          <button mat-button [matMenuTriggerFor]="menu">
+          <button mat-button [matMenuTriggerFor]="menu" >
             <mat-icon>person_outline</mat-icon>
           </button>
           <mat-menu #menu="matMenu">

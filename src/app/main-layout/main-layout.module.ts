@@ -18,6 +18,7 @@ import { ViewLayoutComponent } from './view-layout/view-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+// import { ChartConfiguration, ChartOptions } from 'chart.js';
 
 
 @NgModule({
@@ -37,6 +38,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MaterialModule,
     RouterOutlet,
     FlexLayoutModule,
+    // NgChartsModule,
+    // ChartConfiguration,
+    // ChartOptions,
 
 
 

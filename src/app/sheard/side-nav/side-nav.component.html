@@ -39,7 +39,7 @@
 
 
 
-<div class="min-vh-100">
+<!-- <div class="min-vh-100">
 <a
           class="nav-link d-flex text-decoration-none align-items-center my-3 ps-3"
           aria-current="page"
@@ -49,31 +49,29 @@
           <i class="bi bi-house-door-fill me-3"></i>
           <span class=""> الرئيسية </span></a
         >
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="px-5">
-  <!-- This is the tree node template for leaf nodes -->
-  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-    <!-- use a disabled button to provide padding for tree leaf -->
+<a
+          class="nav-link d-flex text-decoration-none align-items-center my-3 ps-3"
+          aria-current="page"
+          routerLink="/data port"
+          routerLinkActive="active"
 
-    <button mat-icon-button routerLink="/data port"
-    routerLinkActive="active">
-    </button>
-    {{node.name}}
-  </mat-tree-node>
-  <!-- This is the tree node template for expandable nodes -->
-  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding  >
-    
-    {{node.name}}
-    <button mat-icon-button matTreeNodeToggle
-            [attr.aria-label]="'toggle ' + node.name"  >
-      <mat-icon class="mat-icon-rtl-mirror" routerLink="/data port"
-      routerLinkActive="active">
-        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-      </mat-icon>
-    </button>
-  </mat-tree-node>
-</mat-tree>
-<span routerLink="/data port"
-  routerLinkActive="active" class="spa"></span>
-<span routerLink="/data"
-routerLinkActive="active" class="spa2"></span>
-</div>
+        >
+          <i class="bi bi-house-door-fill me-3"></i>
+          <span class=""> بيانات الشركات </span></a
+        >
+<a
+          class="nav-link d-flex text-decoration-none align-items-center my-3 ps-3"
+          aria-current="page"
+          routerLink="/data"
+          routerLinkActive="active"
+
+        >
+          <i class="bi bi-house-door-fill me-3"></i>
+          <span class=""> بيانات الموانئ </span></a
+        >
+
+
+</div> -->
+
+
+
