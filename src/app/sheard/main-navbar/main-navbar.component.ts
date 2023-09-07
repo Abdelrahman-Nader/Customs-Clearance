@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'main-navbar',
   templateUrl: './main-navbar.component.html',
   styleUrls: ['./main-navbar.component.css']
 })
-export class MainNavbarComponent {
+export class MainNavbarComponent implements OnInit {
 
 @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
