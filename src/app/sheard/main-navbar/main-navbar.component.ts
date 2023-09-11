@@ -9,7 +9,7 @@ export class MainNavbarComponent implements OnInit {
 
 @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
-
+sideBarOpen = false;
 
 constructor(){}
 
@@ -21,7 +21,9 @@ ngOnInit(): void {
 toggleSideBar(){
 this.toggleSideBarForMe.emit();
 }
-
+sideBarToggler(){
+  this.sideBarOpen = !this.sideBarOpen;
+}
 
 
 }

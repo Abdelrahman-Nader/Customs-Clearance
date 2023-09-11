@@ -48,7 +48,7 @@
         </li>
       </ul>
     </div>
-    <button mat-icon-button (click)="toggleSideBar()">
+    <button mat-icon-button (click)="sideBarToggler()">
       <mat-icon>menu</mat-icon>
     </button>
     <span routerLink="/layout" routerLinkActive="router-link-active"
@@ -57,15 +57,15 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
+<div *ngIf="!sideBarOpen">
 
-
-<mat-toolbar color="secondary"  fxLayoutAlign="flex-end center" fxLayoutGap="20px" class="ps-5" >
+<mat-toolbar color="secondary"  fxLayoutAlign="flex-end center" fxLayoutGap="20px" class="ps-5"  class="smoth">
   <span  routerLink="/data port"
-  routerLinkActive="active" class="btn btn-success " >بيانات الشركات</span>
+  routerLinkActive="active" class="btn btn-primary " >بيانات الشركات</span>
   <span  routerLink="/data"
   routerLinkActive="active" class="btn btn-primary">بيانات الموانئ</span>
   <span  routerLink="/layout"
-  routerLinkActive="active" class="btn btn-info">الرئيسية</span>
+  routerLinkActive="active" class="btn btn-primary">الرئيسية</span>
 
   <!-- This fills the remaining space of the current row -->
   <!-- <span class="example-fill-remaining-space"> </span>
@@ -75,3 +75,4 @@
   <span>Right Aligned Text</span>
   <span>Right Aligned Text</span> -->
 </mat-toolbar>
+</div>

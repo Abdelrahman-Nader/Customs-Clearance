@@ -6,3 +6,7 @@ ul li{
      Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
+.smoth{
+  /* transition: all 0.3s ease-in-out; */
+  background-color: rgba(144, 39, 242, 0.635);
+}
