@@ -4,6 +4,13 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Chart } from 'chart.js';
 
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+}
+
 
 const DATA_COUNT = 12;
 const labels = [];
@@ -48,22 +55,28 @@ export class DashboardComponent implements OnInit{
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  @ViewChild(MatPaginator, { static: true })
+  paginator!: MatPaginator;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator = new MatPaginator(
-    new MatPaginatorIntl(),
-    ChangeDetectorRef.prototype
-  );
+  // @ViewChild(MatPaginator) paginator: MatPaginator = new MatPaginator(
+  //   new MatPaginatorIntl(),
+  //   ChangeDetectorRef.prototype
+  // );
+  @ViewChild(MatSort, { static: true })
+  sort!: MatSort;
 
-  @ViewChild(MatSort)
-  sort: MatSort = new MatSort();
-
+  // @ViewChild(MatSort)
+  // sort: MatSort = new MatSort();
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 
   constructor() {}
 
   ngOnInit(): void {
 
     this.dataSource.paginator = this.paginator;
-    this.dataSource.paginator = this.paginator;
+
     this.dataSource.sort = this.sort;
 
 
@@ -196,12 +209,7 @@ export class DashboardComponent implements OnInit{
 }
 
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
+
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
@@ -225,7 +233,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
   {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
 ];
-function applyFilter(event: Event | undefined, Event: { new(type: string, eventInitDict?: EventInit | undefined): Event; prototype: Event; readonly NONE: 0; readonly CAPTURING_PHASE: 1; readonly AT_TARGET: 2; readonly BUBBLING_PHASE: 3; }) {
-  throw new Error('Function not implemented.');
-}
+
+
 

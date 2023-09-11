@@ -1,27 +1,32 @@
-<form class="validate col-8 container-fixed" dir="rtl">
+<div class="container align-items-center d-flex justify-content-center text-black">
 
-  <div class="col-md-4 mt-4 ">
-    <label for="inputState">رقم الشركة</label>
-    <input id="inputState" class="form-select border-success">
+<form class="validate " dir="rtl">
+
+  <div class=" " fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-between center">
+    <div fxFlex="15">
+    <label for="inputState" class="form-label">رقم الشركة</label>
+    <input id="inputState" class="form-select border-success" >
   </div>
 
-  <div class="col-md-4 mt-4">
-    <label for="inputState" class="form-label">اسم الشركة</label>
+  <div fxFlex="30">
+    <label for="inputState" class="form-label"> الاسم المختصر</label>
     <input id="inputState" class="form-select border-success">
-  </div>
+</div>
 
-  <div class="col-md-12 mt-4 pb-4">
-    <label for="inputState" class="form-label">اسم الشركة بالانجليزي </label>
+<div fxFlex="30">
+    <label for="inputState" class="form-label">الكود الدولى</label>
     <input id="inputState" class="form-select border-success ">
+
+  </div>
   </div>
 
-  <div class=" d-flex ">
-    <div class="ms-auto col-8 ">
-      <label for="inputState">الاسم المختصر</label>
+  <div class="  " fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-between center"  fxFlexAlign="center">
+    <div class="ms-auto col-8 pt-3" fxFlex="50">
+      <label for="inputState"  class="form-label">اسم الشركة</label>
       <input id="inputState" class="form-select border-success">
     </div>
-    <div class="me-auto  ">
-      <label for="inputState">الكود الدولى</label>
+    <div class="me-auto pt-3 " fxFlex="40">
+      <label for="inputState"  class="form-label">اسم الشركة بالانجليزي </label>
       <input id="inputState" class="form-select border-success">
     </div>
   </div>
@@ -33,7 +38,8 @@
   </div>
 
 </form>
-<div class="container col justify-content-center col-8 align-items-center d-flex flex-column" dir="auto">
+</div>
+<div class="container col justify-content-center col-8 align-items-center d-flex flex-column text-black" dir="auto">
   <div class=" mt-4 pb-4 col-8 ">
     <label for="inputState" class="form-label">ملاحظات </label>
     <textarea class="form-control border-success" id="exampleFormControlTextarea1" rows="2"></textarea>

@@ -59,11 +59,19 @@
 
 
 
-<mat-toolbar color="secondary">
-  <span>Application Title</span>
+<mat-toolbar color="secondary"  fxLayoutAlign="flex-end center" fxLayoutGap="20px" class="ps-5" >
+  <span  routerLink="/data port"
+  routerLinkActive="active" class="btn btn-success " >بيانات الشركات</span>
+  <span  routerLink="/data"
+  routerLinkActive="active" class="btn btn-primary">بيانات الموانئ</span>
+  <span  routerLink="/layout"
+  routerLinkActive="active" class="btn btn-info">الرئيسية</span>
 
   <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
+  <!-- <span class="example-fill-remaining-space"> </span>
 
   <span>Right Aligned Text</span>
+  <span>Right Aligned Text</span>
+  <span>Right Aligned Text</span>
+  <span>Right Aligned Text</span> -->
 </mat-toolbar>

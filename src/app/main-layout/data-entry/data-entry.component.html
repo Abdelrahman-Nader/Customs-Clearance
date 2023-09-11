@@ -1,45 +1,61 @@
-<div class="container align-items-center d-flex justify-content-center">
+<div class="container align-items-center d-flex justify-content-center text-black">
   <form class="validate" dir="rtl">
-    <div class="justify-content-start d-flex mt-4 align-items-center gap-3">
-      <label for="inputState">كود الميناء</label>
-      <input id="inputState" class="form-select border-success w-25" />
+    <div class=" " fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-between center">
+
+      <div fxFlex="10">
+      <label for="inputState" class="form-label">كود الميناء</label>
+      <input id="inputState" class="form-select border-success " />
+      </div>
+
+      <div fxFlex="30">
       <label for="inputState" class="form-label">اسم الميناء</label>
-      <input id="inputState" class="form-select border-success w-50" />
+      <input id="inputState" class="form-select border-success" />
+      </div>
+
+      <div fxFlex="30">
       <label for="inputState" class="form-label">اسم الميناء بالانجليزي </label>
-      <input id="inputState" class="form-select border-success w-50" />
+      <input id="inputState" class="form-select border-success " />
+      </div>
+
     </div>
 
-    <div class="justify-content-start d-flex mt-4 align-items-center gap-3">
-
-      <label class="form-check-label" for="validationFormCheck3"
+    <div class="justify-content-start d-flex mt-4 align-items-center gap-3 text-black" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-between center"  fxFlexAlign="center">
+      <div fxFlex="30">
+      <label class="form-check-label form-label" for="validationFormCheck3"
         >نوع الميناء</label
       >
       <select
-        class="form-select border-success w-25"
+        class="form-select border-success "
         required
         aria-label="select example"
       >
         <option value="1">جوي</option>
         <option value="2">بحري</option>
       </select>
-      <label class="form-check-label" for="validationFormCheck3"
+      </div>
+      <div fxFlex="30">
+      <label class="form-check-label form-label" for="validationFormCheck3"
         >مؤشر الميناء</label
       >
       <select
-        class="form-select border-success w-25"
+        class="form-select border-success "
         required
         aria-label="select example"
       >
         <option value="1">محلى</option>
         <option value="2">أجنبي</option>
       </select>
+    </div>
 
-      <label for="inputState"> كود الميناء الدولى</label>
-      <input id="inputState" class="form-select border-success w-25" />
+      <div fxFlex="20">
+      <label for="inputState" class="form-label"> كود الميناء الدولى</label>
+      <input id="inputState" class="form-select border-success " />
+    </div>
+
     </div>
   </form>
 </div>
-<div class="container col justify-content-center col-8 align-items-center d-flex flex-column" dir="auto">
+<div class="container col justify-content-center col-8 align-items-center d-flex flex-column text-black" dir="auto">
   <div class=" mt-4 pb-4 col-8 ">
     <label for="inputState" class="form-label">ملاحظات </label>
     <textarea class="form-control border-success" id="exampleFormControlTextarea1" rows="2"></textarea>
