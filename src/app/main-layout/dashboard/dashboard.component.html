@@ -1,31 +1,46 @@
 
 <div class="container">
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
 
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
 
+
       <!-- Position Column -->
-      <ng-container matColumnDef="position">
+      <ng-container matColumnDef="harborCode">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
-        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.harborCodeNational}} </td>
       </ng-container>
 
       <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      <ng-container matColumnDef="Campony">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name of Campony </th>
+        <td mat-cell *matCellDef="let element"> {{element.nameComp}} </td>
       </ng-container>
 
       <!-- Weight Column -->
-      <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>
-        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+      <ng-container matColumnDef="Harbor">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>  Name of Harbor </th>
+        <td mat-cell *matCellDef="let element"> {{element.nameHarbor}} </td>
       </ng-container>
 
       <!-- Symbol Column -->
-      <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </th>
-        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+      <ng-container matColumnDef="kindHarbor">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Kind of Harbor </th>
+        <td mat-cell *matCellDef="let element"> {{element.kindHarbor}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="Edit">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Edit </th>
+        <td mat-cell *matCellDef="let element, index as i">
+          <mat-icon (click)="deleIcon(element)" [routerLink]="['/data port',element]"  >edit</mat-icon>
+
+
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

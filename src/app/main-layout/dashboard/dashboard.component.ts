@@ -3,14 +3,36 @@ import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Chart } from 'chart.js';
+import { IcustomeData } from 'src/app/inter-face/icustome-data';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
+// export interface PeriodicElement {
+//   name: string;
+//   position: number;
+//   weight: number;
+//   symbol: string;
+// }
+const ELEMENT_DATA: IcustomeData[] = [
+  {harborCodeNational: 1, nameHarbor: 'Hydrogen',nameComp: 'ahmed', kindHarbor: 'H', deleIcon: ''},
+  {harborCodeNational: 2, nameHarbor: 'Helium',nameComp: 'ahmed', kindHarbor: 'He', deleIcon: ''},
+  {harborCodeNational: 3, nameHarbor: 'Lithium',nameComp: 'ahmed',kindHarbor: 'Li', deleIcon: ''},
+  {harborCodeNational: 4, nameHarbor: 'Beryllium',nameComp: 'ahmed', kindHarbor: 'Be', deleIcon: ''},
+  {harborCodeNational: 5, nameHarbor: 'Boron', nameComp: 'ahmed', kindHarbor: 'B', deleIcon: ''},
+  {harborCodeNational: 6, nameHarbor: 'Carbon',nameComp: 'ahmed', kindHarbor: 'C', deleIcon: ''},
+  {harborCodeNational: 7, nameHarbor: 'Nitrogen',nameComp: 'ahmed', kindHarbor: 'N', deleIcon: ''},
+  {harborCodeNational: 8, nameHarbor: 'Oxygen',nameComp: 'ahmed', kindHarbor: 'O', deleIcon: ''},
+  {harborCodeNational: 9, nameHarbor: 'Fluorine',nameComp: 'ahmed', kindHarbor: 'F', deleIcon: ''},
+  {harborCodeNational: 10, nameHarbor: 'Neon', nameComp: 'ahmed', kindHarbor: 'Ne', deleIcon: ''},
+  {harborCodeNational: 11, nameHarbor: 'Sodium',nameComp: 'ahmed', kindHarbor: 'Na', deleIcon: ''},
+  {harborCodeNational: 12, nameHarbor: 'Magnesium',nameComp: 'ahmed', kindHarbor: 'Mg', deleIcon: ''},
+  {harborCodeNational: 13, nameHarbor: 'Aluminum',nameComp: 'ahmed', kindHarbor: 'Al', deleIcon: ''},
+  {harborCodeNational: 14, nameHarbor: 'Silicon',nameComp: 'ahmed', kindHarbor: 'Si', deleIcon: ''},
+  {harborCodeNational: 15, nameHarbor: 'Phosphorus',nameComp: 'ahmed', kindHarbor: 'P', deleIcon: ''},
+  {harborCodeNational: 16, nameHarbor: 'Sulfur',nameComp: 'ahmed', kindHarbor: 'S', deleIcon: ''},
+  {harborCodeNational: 17, nameHarbor: 'Chlorine',nameComp: 'ahmed', kindHarbor: 'Cl', deleIcon: ''},
+  {harborCodeNational: 18, nameHarbor: 'Argon',nameComp: 'ahmed', kindHarbor: 'Ar', deleIcon: ''},
+  {harborCodeNational: 19, nameHarbor: 'Potassium',nameComp: 'ahmed', kindHarbor: 'K', deleIcon: ''},
+  {harborCodeNational: 20, nameHarbor: 'Calcium',nameComp: 'ahmed', kindHarbor: 'Ca', deleIcon: ''},
+];
 
 const DATA_COUNT = 12;
 const labels = [];
@@ -53,8 +75,8 @@ export class DashboardComponent implements OnInit{
   // data2: any = {};
   data3: any = [];
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  displayedColumns: string[] = ['harborCode', 'Campony', 'Harbor', 'kindHarbor', 'Edit'];
+  dataSource = new MatTableDataSource<IcustomeData>(ELEMENT_DATA);
   @ViewChild(MatPaginator, { static: true })
   paginator!: MatPaginator;
 
@@ -67,7 +89,8 @@ export class DashboardComponent implements OnInit{
 
   // @ViewChild(MatSort)
   // sort: MatSort = new MatSort();
-  applyFilter(filterValue: string) {
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
@@ -206,33 +229,18 @@ export class DashboardComponent implements OnInit{
       },
     })
   }
+
+  public deleIcon(item: IcustomeData) {
+    this.dataSource._updatePaginator
+
+  }
+
 }
 
 
 
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-  {position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na'},
-  {position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg'},
-  {position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al'},
-  {position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si'},
-  {position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P'},
-  {position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S'},
-  {position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl'},
-  {position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar'},
-  {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
-  {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
-];
+
 
 
 
